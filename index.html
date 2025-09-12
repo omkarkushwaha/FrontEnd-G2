@@ -7,25 +7,69 @@
   <title>TourGuideIndia</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-  <nav>
-    <div class="logo">Tour Guide India</div>
-    <ul>
-      <li><a href="#tourist-places">Tourist Places</a></li>
-      <li><a href="#top-destinations">Top Destinations</a></li>
-      <li><a href="#guides">Guides</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Explore Incredible India</h1>
-      <p>Discover the beauty and culture of India with our expert guides.</p>
-    </div>
-  </section>
-
+  <body>
+      <nav>
+        <div class="logo"><h1>Tour Guide India</h1></div>
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Tourist Places</a>
+          </li>
+          <li>
+            <a href="#">Top Destinations</a>
+          </li>
+          <li>
+            <a href="#">Guides</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        <ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">Tourist Places</a>
+          </li>
+          <li>
+            <a href="#">Top Destinations</a>
+          </li>
+          <li>
+            <a href="#">Guides</a>
+          </li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+        </ul>
+      </div> 
+    </nav>
+  
+    <section class="hero">
+      <!-- Video Background with poster -->
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="./hero.mp4" type="video/mp4">
+        <!-- If video not supported, text fallback will show -->
+        Your browser does not support the video tag.
+      </video>
+>
+    
+      <!-- Content -->
+      <div class="hero-content">
+        <h1>Explore Incredible India</h1>
+        <p>Discover the beauty and culture of India with our expert guides.</p>
+      </div>
+    </section>
+    
+    
    <section id="tourist-places" class="places">
   <h2>Famous Tourist Places</h2>
   <div class="places-grid">
@@ -92,5 +136,6 @@
 
   </div>
 </section>
+<script src="script.js"></script>
 </body>
 </html>
