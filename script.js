@@ -28,7 +28,7 @@ const modalTitle = document.getElementById("modal-title");
 const modalDesc = document.getElementById("modal-description");
 const modalImg = document.getElementById("modal-img");
 
-document.querySelectorAll(".know-more").forEach(button => {
+document.querySelectorAll(".explore").forEach(button => {
   button.addEventListener("click", function() {
     let card = this.parentElement;
 
@@ -51,4 +51,5 @@ window.addEventListener("click", e => {
     modal.style.display = "none";
   }
 });
+
 
