@@ -574,6 +574,11 @@ button:hover::before {
   font-size: 1.2rem;
 }
 
+.reviews {
+  font-size: 14px;
+  color: #555;
+}
+
 /* Scroll Animation */
 .reveal {
   opacity: 0;
