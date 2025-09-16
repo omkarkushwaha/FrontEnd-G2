@@ -733,3 +733,271 @@ button:hover::before {
  .guide-info strong {
      color: #333;
  }
+
+/*------------- Day 5 ----------------  */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+
+.contact-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* makes it at least the height of the screen */
+  background: url('TravelJunk.jpg') center center / cover no-repeat;
+  background-attachment: fixed;  /* optional parallax effect */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* keep the existing styles for the inner box */
+.container {
+    background: #d5f4e6;
+    box-sizing: border-box;
+    border-radius: 15px;
+    opacity: 0.9;
+    padding: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* inherit box-sizing for everything inside */
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* the form box itself */
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: Calibri, Arial, sans-serif;
+}
+h2{
+  text-shadow: #55ACEE;
+  font-weight:500;
+}
+
+h1, p{
+  text-align: center;
+ 
+  
+}
+label{
+  display:block;
+  margin:1em 0 .2em;
+}
+/* single-line text, checkbox, and button */
+input, select, textarea{
+  display:block;
+  width:100%;
+  padding:.3em;
+  font-size:20px;
+  background-color:#fbfbfb;
+  border:solid 1px #CCC;
+  resize:vertical;
+  border-radius: 15px;
+}
+textarea{
+  min-height:180px;
+  border-radius: 15px;
+}
+select{
+  color:rgb(0, 0, 0);
+}
+option{
+  color:rgb(16, 16, 19);
+  background: lavenderBlush;
+}
+input[type=checkbox]{
+  display:inline;
+  width:auto;
+  color:red;
+}
+
+input[type=submit]{
+  background:lightcoral;
+  margin:1em 0 0;
+  color:white;
+  border:none;
+  border-radius:8px;
+  transition:all .3s ease-out;
+  border-radius: 15px;
+
+}
+
+input:focus,
+input:hover,
+select:focus,
+select:hover,
+textarea:focus,
+textarea:hover{
+  background: rgb(201, 201, 201);
+  
+}
+
+/* hover and focus states */
+input[type=submit]:hover,
+input[type=submit]:focus{
+  background: lightgreen;
+  outline:none;
+}
+
+/* Style all font awesome icons */
+.social{
+    display:flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;          /* adjust icon size */
+  color: #333;              /* icon color */
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;      /* keep icons in one line */
+  gap: 5px;                /* spacing between icons */
+  justify-content: center;
+  align-items: center;
+}
+.social p {
+  margin: 0;
+  font-weight: bold;
+}
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 85px;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #77BAB5;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-instagram {
+  background: #BE78CF;
+  color: white;
+}
+
+/* Footer Styles */
+
+.footer {
+  position: absolute;
+  margin-top: 120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1280px;
+  width: 100%;
+  background: #b1e9e9;
+  border-radius: 6px;
+}
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* gap: 3.5rem; */
+  padding: 30px;
+}
+h4{
+  text-align: center;
+  color: #070707;
+}
+.footer-row .footer-col h3 {
+  color: #0e0c0c;
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: underline;
+}
+.footer-col .links {
+  margin-top: 20px;
+}
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.footer-col .links li a {
+  text-decoration: none;
+  color: #0e0d0d;
+}
+.footer-col .links li a:hover {
+  color: #f59e9e;
+}
+.footer-col p {
+  margin: 20px 0;
+  color: #1f1d1d;
+  max-width: 300px;
+}
+/* .footer-col form {
+  display: flex;
+  gap: 5px;
+} */
+
+ 
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+.footer-col .icons i {
+  color: #afb6c7;
+}
+.footer-col .icons i:hover  {
+  color: #f18080;
+}
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+}
+
+
+
+@media screen and (min-width:600px) {
+  /*  make the form 2 columns */
+  form:after{
+    content:'';
+    display:block;
+    clear:both;
+  }
+  .column{
+    width:50%;
+    padding:1em;
+    float:left;
+  }
+}
+
