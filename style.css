@@ -16,10 +16,11 @@ body {
 nav {
   position: sticky;
   top: 0;
-  padding: 8px 8px 5px 5px;
+  padding: 12px 10px 12px 8px;
   display: flex;
   justify-content: space-between;
-  align-items: center;;
+  align-items: center;
+  background:linear-gradient(135deg, #e0f2f1, #ffffff);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   z-index: 1;
