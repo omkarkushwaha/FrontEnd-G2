@@ -52,4 +52,67 @@ window.addEventListener("click", e => {
   }
 });
 
+// -----------------Day 5 -----------------------
+
+document.querySelector(".contact-form").addEventListener("submit", function(e){
+  const email = document.getElementById("the-email");
+  const phone = document.getElementById("the-phone");
+  let isValid = true;
+
+  if (!email.value.includes("@")) {
+    alert("Please enter a valid email.");
+    isValid = false;
+  }
+
+  if (phone.value.trim().length < 10) {
+    alert("Phone number must be at least 10 digits.");
+    isValid = false;
+  }
+
+  if (!isValid) e.preventDefault();   
+});
+
+const form = document.querySelector(".contact-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault(); // stop default submit so we can show message
+    const feedback = document.createElement("p");
+    feedback.textContent = "✅ Thanks! We’ll get back soon.";
+    feedback.style.color = "green";
+    feedback.style.marginTop = "1rem";
+    form.appendChild(feedback);
+    form.reset();
+  });
+
+
+const emailInput = document.getElementById("the-email");
+emailInput.addEventListener("input", () => {
+  if(emailInput.validity.valid){
+    emailInput.style.borderColor = "green";
+  } else {
+    emailInput.style.borderColor = "red";
+  }
+});
+
+ form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    
+    
+      alert("✅ Thanks! Your message has been recorded.");
+    form.reset();
+  });
+
+const contactLink = document.querySelector("a[href='#contactForm']");
+  if (contactLink) {
+    contactLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      document
+        .getElementById("contactForm")
+        .scrollIntoView({ behavior: "smooth" });
+    });
+  }
+
+
+
+
+
 
