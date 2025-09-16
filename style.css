@@ -16,7 +16,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  padding: 20px ;
+  padding: 25px 20% 25px 20% ;
   display: flex;
   justify-content: space-between;
   align-items: center;
