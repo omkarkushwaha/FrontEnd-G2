@@ -16,7 +16,7 @@ body {
 nav {
   position: sticky;
   top: 0;
-  padding: 25px 15% 25px 20% ;
+  padding: 25px 10% 25px 20% ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,12 +30,13 @@ nav .logo {
   align-items: center;
 }
 nav .logo img {
-  height: 25px;
+  height: 28px;
   width: auto;
   margin-right: 10px;
 }
 nav .logo h1 {
-  font-size: 1.1rem;
+  font-size: 2rem;
+  font-family: Arial, sans-serif;
   background: linear-gradient(to right, #b927fc 0%, #2c64fc 100%);
   -webkit-background-clip: text;
   background-clip: text;
