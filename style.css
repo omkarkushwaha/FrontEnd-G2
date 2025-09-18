@@ -158,6 +158,39 @@ body {
             visibility: visible;
         }
 
+  @media screen and (max-width: 790px) {
+            .hamburger {
+                display: flex;
+            }
+            
+            nav ul {
+                display: none;
+            }
+
+            nav {
+                padding: 20px;
+            }
+
+            .menubar {
+                width: 280px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            nav .logo h1 {
+                font-size: 1.5rem;
+            }
+
+            .menubar {
+                width: 100%;
+                right: -100%;
+            }
+
+            .menubar.active {
+                right: 0;
+            }
+        }
+
 .hero {
   height: 80vh;
   display: flex;
