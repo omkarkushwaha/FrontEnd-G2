@@ -1,21 +1,36 @@
-const mobileNav = document.querySelector(".hamburger");
-const navbar = document.querySelector(".menubar");
+ const mobileNav = document.querySelector(".hamburger");
+        const navbar = document.querySelector(".menubar");
+        const overlay = document.querySelector(".overlay");
+        const menuLinks = document.querySelectorAll(".menubar ul li a");
 
-// Toggle Menu
-const toggleNav = () => {
-  navbar.classList.toggle("active");
-  mobileNav.classList.toggle("hamburger-active");
-};
+        const toggleNav = () => {
+            navbar.classList.toggle("active");
+            mobileNav.classList.toggle("hamburger-active");
+            overlay.classList.toggle("active");
+            document.body.style.overflow = navbar.classList.contains("active") ? "hidden" : "";
+        };
 
-mobileNav.addEventListener("click", toggleNav);
+        const closeNav = () => {
+            navbar.classList.remove("active");
+            mobileNav.classList.remove("hamburger-active");
+            overlay.classList.remove("active");
+            document.body.style.overflow = "";
+        };
 
-// Close menu when clicking a link
-document.querySelectorAll(".menubar a").forEach(link => {
-  link.addEventListener("click", () => {
-    navbar.classList.remove("active");
-    mobileNav.classList.remove("hamburger-active");
-  });
-});
+        mobileNav.addEventListener("click", toggleNav);
+        overlay.addEventListener("click", closeNav);
+
+        // Close menu when clicking on a link
+        menuLinks.forEach(link => {
+            link.addEventListener("click", closeNav);
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && navbar.classList.contains("active")) {
+                closeNav();
+            }
+        });
 
 
 
@@ -121,6 +136,7 @@ const contactLink = document.querySelector("a[href='#contactForm']");
         .scrollIntoView({ behavior: "smooth" });
     });
   }
+
 
 
 
