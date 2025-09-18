@@ -1,11 +1,22 @@
 const mobileNav = document.querySelector(".hamburger");
 const navbar = document.querySelector(".menubar");
 
+// Toggle Menu
 const toggleNav = () => {
   navbar.classList.toggle("active");
   mobileNav.classList.toggle("hamburger-active");
 };
-mobileNav.addEventListener("click", () => toggleNav());
+
+mobileNav.addEventListener("click", toggleNav);
+
+// Close menu when clicking a link
+document.querySelectorAll(".menubar a").forEach(link => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    mobileNav.classList.remove("hamburger-active");
+  });
+});
+
 
 
 // Scroll Reveal (Sagar Mohanty) Day-3
@@ -110,6 +121,7 @@ const contactLink = document.querySelector("a[href='#contactForm']");
         .scrollIntoView({ behavior: "smooth" });
     });
   }
+
 
 
 
